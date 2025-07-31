@@ -1,0 +1,5 @@
+.gradient-split {
+  background: linear-gradient(to right, #f97316 10%, #14b8a6 90%);
+  background-clip: text;
+  color: transparent;
+}
