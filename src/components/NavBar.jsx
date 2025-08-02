@@ -9,9 +9,9 @@ const NavBar =() =>{
 
 
         <ul className="flex space-x-6 text-gray-700 font-medium">
-          <li><a href="#" className="hover:text-orange-500">Home</a></li>
-          <li><a href="#" className="hover:text-orange-500">Contact Us</a></li>
-          <li><a href="#" className="hover:text-orange-500">FAQs</a></li>
+          <li><a href="#home" className="hover:text-orange-500">Home</a></li>
+          <li><a href="#contact" className="hover:text-orange-500">Contact Us</a></li>
+          <li><a href="#faqs" className="hover:text-orange-500">FAQs</a></li>
         </ul>
       </nav>
     </header>

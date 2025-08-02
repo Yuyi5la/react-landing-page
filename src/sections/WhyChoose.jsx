@@ -6,19 +6,21 @@ const WhyChoose = () => {
   <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-12">
     
     {/* LEFT SIDE - Placeholder for image, even on small screens */}
-    <div className="w-full md:w-1/2 min-h-[300px] bg-gray-800 rounded-lg flex items-center justify-center">
-      {/* Replace with actual image later */}
-      <span className="text-gray-500">[ Image Placeholder ]</span>
+    <div className="w-full md:w-1/2 min-h-[300px] bg-gray-700 rounded-lg flex items-center justify-center">
+     <img
+      src="/whychooseimg.png"
+      alt="Why Choose PicMe"
+      className="w-full h-full object-cover rounded-lg"
+        />
     </div>
 
-    {/* RIGHT SIDE - Text block */}
     <div className="w-full md:w-1/2 md:pl-10 flex flex-col justify-center">
       <h2 className="text-3xl md:text-4xl font-bold text-white text-left md:ml-4">
         Why choose PicMe?
       </h2>
       <div className="h-1 w-48 bg-gradient-to-r from-orange-400 to-teal-700 mt-2 mb-8 rounded md:ml-4"></div>
 
-      {/* For Clients */}
+   
       <div className="mb-8 md:ml-4">
         <h3 className="text-xl font-semibold text-orange-400 mb-2">For Clients:</h3>
         <ul className="text-gray-300 space-y-1">
@@ -28,7 +30,6 @@ const WhyChoose = () => {
         </ul>
       </div>
 
-      {/* For Creatives */}
       <div className="md:ml-4">
         <h3 className="text-xl font-semibold text-orange-400 mb-2">For Creatives:</h3>
         <ul className="text-gray-300 space-y-1">

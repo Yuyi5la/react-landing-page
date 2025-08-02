@@ -6,7 +6,7 @@ import HowItWorks from "./sections/HowItWorks";
 import WhyChoose from "./sections/WhyChoose";
 import TopCreatives from "./sections/TopCreatives";
 import Testimonials from "./sections/Testimonials"
-import TemplateSection from "./sections/templatewhitesection"
+import Getstarted from "./sections/Getstartednow"
 import ContactUs from "./sections/ContactUs"
 import FAQS from "./sections/FAQS"
 import Footer from "./sections/Footer"
@@ -19,7 +19,7 @@ function App() {
        <WhyChoose/>
        <TopCreatives/>
        <Testimonials/>
-       <TemplateSection/>
+       <Getstarted/>
        <ContactUs/>
        <FAQS/>
        <Footer/>
