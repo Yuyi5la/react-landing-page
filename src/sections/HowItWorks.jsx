@@ -19,6 +19,8 @@ const HowItWorks = () => {
         {features.map((feature, index) => (
           <div
             key={index}
+            data-aos="fade-up"
+            data-aos-delay={index * 100} // adds a stagger effect
             className="bg-white rounded-lg p-6 shadow-md hover:-translate-y-1 transition-transform duration-300"
           >
             <div className="text-gray-600 mb-4 flex justify-center">{feature.icon}</div>

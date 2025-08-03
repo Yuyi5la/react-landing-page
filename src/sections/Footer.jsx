@@ -1,78 +1,89 @@
-import React from "react";
-import { PhoneIcon, EnvelopeIcon, MapPinIcon } from "@heroicons/react/24/solid";
+import {
+  MapPinIcon,
+  PhoneIcon,
+  EnvelopeIcon,
+} from "@heroicons/react/24/solid";
+import {
+  FaApple,
+  FaGooglePlay,
+  FaInstagram,
+  FaYoutube,
+  FaXTwitter,
+} from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-12 px-6">
-      <div className="max-w-6xl mx-auto flex flex-wrap justify-between items-start gap-4 lg:gap-0">
-  {/* Logo Section */}
-  <div className="flex-1 min-w-[180px]">
-    <h2 className="text-3xl font-bold">
-      Pic<span className="text-orange-500">Me</span>
-    </h2>
-    <p className="mt-2 text-white">
-      A marketplace for visual creatives
-    </p>
-  </div>
+    <footer className="bg-black text-white px-6 py-10">
+      <div className="max-w-7xl mx-auto">
+        {/* Top Section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {/* Logo and Tagline */}
+          <div>
+            <h2 className="text-3xl font-bold">
+              Pic<span className="text-orange-500">Me</span>
+            </h2>
+            <p className="text-gray-400 mt-2">A marketplace for visual creatives</p>
+          </div>
 
-  {/* Navigation */}
-  <div className="flex-1 min-w-[180px] ml-4">
-    <h3 className="text-lg font-semibold mb-4">Navigation</h3>
-    <ul className="space-y-2 text-white text-sm">
-      <li><a href="#home" className="hover:text-white">Home</a></li>
-      <li><a href="#pages" className="hover:text-white">Pages</a></li>
-      <li><a href="#about" className="hover:text-white">About Us</a></li>
-      <li><a href="#services" className="hover:text-white">Services</a></li>
-    </ul>
-  </div>
+          {/* Navigation */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Navigation</h3>
+            <ul className="space-y-2 text-gray-400 text-sm">
+              <li><a href="#home">Home</a></li>
+              {/*<li><a href="#">Pages</a></li>*/}
+              <li><a href="#contact">contact Us</a></li>
+              <li><a href="#faqs">FAQs</a></li>
+            </ul>
+          </div>
 
-  {/* Downloads & Socials */}
-  <div className="flex-1 min-w-[220px] lg:ml-auto">
-    <h3 className="text-lg font-semibold mb-4">Download</h3>
-    <div className="space-y-3">
-      <a href="#" className="block w-fit">
-        <img src="/app-store.png" alt="App Store" className="w-36" />
-      </a>
-      <a href="#" className="block w-fit">
-        <img src="/play-store.png" alt="Play Store" className="w-36" />
-      </a>
-    </div>
-    <div className="flex gap-4 mt-6 text-white text-xl">
-      <a href="#" aria-label="X"><i className="fab fa-x-twitter" /></a>
-      <a href="#" aria-label="Instagram"><i className="fab fa-instagram" /></a>
-      <a href="#" aria-label="YouTube"><i className="fab fa-youtube" /></a>
-    </div>
-  </div>
-</div>
-
-      {/* 📞 Contact Row Below the Grid */}
-      <div className="max-w-6xl mx-auto mt-10 flex flex-col sm:flex-row flex-wrap justify-between items-center gap-4 text-sm text-white">
-        <div className="flex items-center gap-0">
-          <MapPinIcon className="h-5 w-5 text-yellow-400" />
-          <span>Benin City, Edo State, Nigeria</span>
+          {/* Download + Social Icons aligned right */}
+          <div className="md:ml-auto">
+            <h3 className="text-lg font-semibold mb-4">Download</h3>
+            <div className="space-y-3">
+              <a
+                href="#"
+                className="flex items-center gap-2 bg-white text-black px-3 py-2 rounded shadow-md w-fit text-sm"
+              >
+                <FaApple className="text-lg" />
+                App Store
+              </a>
+              <a
+                href="#"
+                className="flex items-center gap-2 bg-white text-black px-3 py-2 rounded shadow-md w-fit text-sm"
+              >
+                <FaGooglePlay className="text-lg" />
+                Play Store
+              </a>
+            </div>
+            <div className="flex gap-4 mt-6 text-white">
+              <FaXTwitter className="text-xl" />
+              <FaInstagram className="text-xl" />
+              <FaYoutube className="text-xl" />
+            </div>
+          </div>
         </div>
-        <div className="flex items-center gap-0">
-          <PhoneIcon className="h-5 w-5 text-yellow-400" />
-          <span>0901 234 5678</span>
+
+        {/* Contact Info Row */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-gray-300 mt-10">
+          <div className="flex items-center gap-2">
+            <MapPinIcon className="h-5 w-5 text-yellow-400" />
+            <span>Benin City, Edo State, Nigeria.</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <PhoneIcon className="h-5 w-5 text-yellow-400" />
+            <span>0901 234 5678</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <EnvelopeIcon className="h-5 w-5 text-yellow-400" />
+            <span>info@picmedigitalsolution.com</span>
+          </div>
         </div>
-         <div className="flex items-center gap-2">
-          <EnvelopeIcon className="h-5 w-5 text-yellow-400" />
-          <a
-            href="mailto:info@picmedigitalsolution.com"
-            className="hover:text-white"
-          >
-            info@picmedigitalsolution.com
-          </a>
+
+        {/* Bottom */}
+        <div className="text-center text-sm text-gray-400 mt-6 border-t border-gray-700 pt-4">
+          © 2025 PicMe. All Rights Reserved
         </div>
       </div>
-
-      {/* Divider */}
-      <hr className="border-white my-8" />
-
-      {/* Copyright */}
-      <p className="text-center text-white text-sm">
-        © 2025 PicMe. All Rights Reserved
-      </p>
     </footer>
   );
 };

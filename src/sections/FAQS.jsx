@@ -35,22 +35,41 @@ const HelpAndFAQSection = () => {
           </h3>
 
           {/* FAQ Items */}
-          <div className="space-y-4">
-            {[
-              "What is PicMe?",
-              "What type of Photography and videography services are available?",
-              "How can I book a Visual Creative for my project?",
-              "Do you offer post-production services like editing and visual effect?",
-              "What is the plan for premium users like?",
-            ].map((question, index) => (
-              <details key={index} className="bg-gray-100 p-4 rounded-md cursor-pointer">
-                <summary className="font-medium text-gray-800">{question}</summary>
-                <p className="mt-2 text-sm text-gray-700">
-                  This is a placeholder answer. Replace with your actual content.
-                </p>
-              </details>
-            ))}
-          </div>
+        <div className="space-y-4">
+  {[
+    {
+      question: "What is PicMe?",
+      answer:
+        "PicMe is a digital marketplace that connects photographers, videographers, and other visual creatives with clients looking to hire their services for events, shoots, and more.",
+    },
+    {
+      question: "What type of Photography and videography services are available?",
+      answer:
+        "We offer a wide range of services including event photography, fashion shoots, product photography, wedding videography, short films, and more.",
+    },
+    {
+      question: "How can I book a Visual Creative for my project?",
+      answer:
+        "You can browse our list of verified creatives, check their portfolios, and book directly through the platform. Our intuitive booking system makes it quick and easy.",
+    },
+    {
+      question: "Do you offer post-production services like editing and visual effects?",
+      answer:
+        "Yes! Many of our creatives also offer post-production services like photo retouching, video editing, color grading, and VFX. You can filter for these when searching.",
+    },
+    {
+      question: "What is the plan for premium users like?",
+      answer:
+        "Premium users get access to top-tier creatives, priority customer support, advanced booking tools, and exclusive deals on services and promotions.",
+    },
+  ].map((item, index) => (
+    <details key={index} className="bg-gray-100 p-4 rounded-md cursor-pointer">
+      <summary className="font-medium text-gray-800">{item.question}</summary>
+      <p className="mt-2 text-sm text-gray-700">{item.answer}</p>
+    </details>
+  ))}
+</div>
+
 
           {/* Didn't Find an Answer */}
           <div className="text-center mt-12">

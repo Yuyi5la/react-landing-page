@@ -1,8 +1,15 @@
-import React from 'react';
+import React from "react";
+import {
+  PhoneIcon,
+  EnvelopeIcon,
+  MapPinIcon,
+  CameraIcon,
+} from "@heroicons/react/24/solid";
 
 const ContactSection = () => {
   return (
     <>
+      {/* Section Title */}
       <section
         id="contact"
         className="bg-black text-white py-32 flex items-center justify-center"
@@ -10,9 +17,10 @@ const ContactSection = () => {
         <h2
           className="text-5xl font-bold text-transparent bg-clip-text"
           style={{
-            backgroundImage: 'linear-gradient(to right, #f97316 20%, #0f766e 80%)',
-            WebkitBackgroundClip: 'text',
-            backgroundClip: 'text',
+            backgroundImage:
+              "linear-gradient(to right, #f97316 20%, #0f766e 80%)",
+            WebkitBackgroundClip: "text",
+            backgroundClip: "text",
           }}
         >
           Contact Us
@@ -24,41 +32,57 @@ const ContactSection = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           {/* Left Column */}
           <div>
-            <h3 className="text-3xl font-bold text-teal-800 mb-4">Get In Touch</h3>
+            <h3 className="text-3xl font-bold text-teal-800 mb-4">
+              Get In Touch
+            </h3>
             <p className="text-gray-700 mb-8 max-w-md">
-              Contact us for any question using the info below or fill the contact form and we will get back to you on your enquiry.
+              Contact us for any question using the info below or fill the
+              contact form and we will get back to you on your enquiry.
             </p>
 
+            {/* Info Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {/* Row 1: Phone & Email */}
+              {/* Phone */}
               <div className="flex items-start space-x-4">
-                <div className="bg-teal-700 text-white p-3 rounded">📞</div>
+                <div className="bg-teal-700 p-3 rounded">
+                  <PhoneIcon className="h-5 w-5 text-white" />
+                </div>
                 <div>
                   <p className="font-semibold">Phone</p>
                   <p className="text-gray-600 text-sm">09030405060</p>
                 </div>
               </div>
+
+              {/* Email */}
               <div className="flex items-start space-x-4">
-                <div className="bg-teal-700 text-white p-3 rounded">📧</div>
+                <div className="bg-teal-700 p-3 rounded">
+                  <EnvelopeIcon className="h-5 w-5 text-white" />
+                </div>
                 <div>
                   <p className="font-semibold">Email</p>
                   <p className="text-gray-600 text-sm">picme@gmail.com</p>
                 </div>
               </div>
 
-              {/* Row 2: Address & Instagram */}
+              {/* Address */}
               <div className="flex items-start space-x-4">
-                <div className="bg-teal-700 text-white p-3 rounded">📍</div>
+                <div className="bg-teal-700 p-3 rounded">
+                  <MapPinIcon className="h-5 w-5 text-white" />
+                </div>
                 <div>
                   <p className="font-semibold">Address</p>
                   <p className="text-gray-600 text-sm">Edo State, Nigeria</p>
                 </div>
               </div>
+
+              {/* Instagram */}
               <div className="flex items-start space-x-4">
-                <div className="bg-teal-700 text-white p-3 rounded">📷</div>
+                <div className="bg-teal-700 p-3 rounded">
+                  <CameraIcon className="h-5 w-5 text-white" />
+                </div>
                 <div>
                   <p className="font-semibold">Instagram</p>
-                  <p className="text-gray-600 text-sm">PicMe_</p>
+                  <p className="text-gray-600 text-sm">@PicMe_</p>
                 </div>
               </div>
             </div>
@@ -66,16 +90,24 @@ const ContactSection = () => {
             {/* Social Media */}
             <div className="mt-10 border-t pt-6 border-gray-300">
               <p className="font-semibold text-teal-800 mb-2">Social Media</p>
-              <div className="flex space-x-4 text-2xl">
-                <a href="#"><i className="fab fa-facebook"></i></a>
-                <a href="#"><i className="fab fa-x-twitter"></i></a>
-                <a href="#"><i className="fab fa-instagram"></i></a>
-                <a href="#"><i className="fab fa-youtube"></i></a>
+              <div className="flex space-x-4 text-2xl text-teal-700">
+                <a href="#">
+                  <i className="fab fa-facebook-f" />
+                </a>
+                <a href="#">
+                  <i className="fab fa-x-twitter" />
+                </a>
+                <a href="#">
+                  <i className="fab fa-instagram" />
+                </a>
+                <a href="#">
+                  <i className="fab fa-youtube" />
+                </a>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Form */}
+          {/* Right Column: Contact Form */}
           <div className="bg-gray-200 p-8 rounded-lg shadow-md">
             <form className="space-y-6">
               <div>
