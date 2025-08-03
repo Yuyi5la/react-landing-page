@@ -41,8 +41,13 @@ const TestimonialSlider = () => {
 
       {/* Content Wrapper */}
       <div className="flex flex-col md:flex-row gap-10 items-center justify-center max-w-6xl mx-auto transition-all">
+        
         {/* Image and client label */}
-        <div className="relative">
+        <div
+          className="relative"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           <img
             src={testimonials[activeIndex].image}
             alt={testimonials[activeIndex].name}
@@ -65,7 +70,11 @@ const TestimonialSlider = () => {
         </div>
 
         {/* Testimonial Box */}
-        <div className="bg-orange-500 text-white rounded-xl p-6 md:p-10 w-full max-w-xl relative">
+        <div
+          className="bg-orange-500 text-white rounded-xl p-6 md:p-10 w-full max-w-xl relative"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
           <div className="text-4xl mb-4">❝</div>
           <p className="leading-relaxed text-white text-md mb-6 transition duration-300">
             {testimonials[activeIndex].text}
