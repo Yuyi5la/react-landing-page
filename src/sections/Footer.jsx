@@ -71,11 +71,11 @@ const Footer = () => {
           </div>
           <div className="flex items-center gap-2">
             <PhoneIcon className="h-5 w-5 text-yellow-400" />
-            <span>0901 234 5678</span>
+            <span>08034031530</span>
           </div>
           <div className="flex items-center gap-2">
             <EnvelopeIcon className="h-5 w-5 text-yellow-400" />
-            <span>info@picmedigitalsolution.com</span>
+            <span>picmedigital@gmail.com</span>
           </div>
         </div>
 

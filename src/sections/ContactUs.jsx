@@ -49,7 +49,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-semibold">Phone</p>
-                  <p className="text-gray-600 text-sm">09030405060</p>
+                  <p className="text-gray-600 text-sm">08034031530</p>
                 </div>
               </div>
 
@@ -60,7 +60,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-semibold">Email</p>
-                  <p className="text-gray-600 text-sm">picme@gmail.com</p>
+                  <p className="text-gray-600 text-sm">picmedigital@gmail.com</p>
                 </div>
               </div>
 
@@ -82,7 +82,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-semibold">Instagram</p>
-                  <p className="text-gray-600 text-sm">@PicMe_</p>
+                  <p className="text-gray-600 text-sm">@picmedigital</p>
                 </div>
               </div>
             </div>
