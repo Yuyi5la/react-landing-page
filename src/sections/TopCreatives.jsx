@@ -34,7 +34,8 @@ const TopCreatives = () => {
           ))}
         </div>
 
-        <div className="mt-12 flex flex-col sm:flex-row justify-center gap-8">
+        <div className="mt-12 flex flex-col sm:flex-row justify-between gap-12 w-full max-w-lg mx-auto">
+
           {[
             {
               label: "Fashion Stylist",
