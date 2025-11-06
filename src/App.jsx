@@ -1,39 +1,37 @@
-import { useEffect } from 'react';
-import './App.css';
+import React, { useEffect } from "react";
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+} from "react-router-dom";
 
-import Navbar from "./components/NavBar";
-import Hero from "./sections/Hero";
-import HowItWorks from "./sections/HowItWorks";
-import WhyChoose from "./sections/WhyChoose";
-import TopCreatives from "./sections/TopCreatives";
-import Testimonials from "./sections/Testimonials";
-import Getstarted from "./sections/Getstartednow";
-import ContactUs from "./sections/ContactUs";
-import FAQS from "./sections/FAQS";
-import Footer from "./sections/Footer";
+import RootLayout from "./Layout/RootLayout.jsx";
+import HomePage from "./sections/Home.jsx";
+import ContactUs from "./sections/ContactUs.jsx";
+import FAQS from "./sections/FAQS.jsx";
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
   }, []);
 
-  return (
-    <>
-      <Navbar />
-      <Hero />
-      <HowItWorks />
-      <WhyChoose />
-      <TopCreatives />
-      <Testimonials />
-      <Getstarted />
-      <ContactUs />
-      <FAQS />
-      <Footer />
-    </>
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<RootLayout />}>
+        {/* Home page with all sections */}
+        <Route index element={<HomePage />} />
+        {/* Other pages */}
+        <Route path="ContactUs" element={<ContactUs />} />
+        <Route path="faqs" element={<FAQS />} />
+      </Route>
+    )
   );
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;

@@ -3,17 +3,17 @@ import React, { useState } from 'react';
 const testimonials = [
   {
     name: 'James Carter',
-    image: '/person1.webp',
+    image: '/sk-6 2.JPEG',
     text: "PicMe helped me connect with top creatives in minutes. It’s fast, reliable, and super easy to use.",
   },
   {
     name: 'Henry Nwadike',
-    image: '/person3.avif',
+    image: '/3P0A0071.JPG',
     text: "As a photographer, I’ve never had this much visibility. The platform is a game changer!",
   },
   {
     name: 'Tolu Adebayo',
-    image: '/person2.webp',
+    image: '/DSC01618.JPEG',
     text:"Finding a makeup artist that fits my budget and style has never been easier. Love PicMe!",
   },
 ];

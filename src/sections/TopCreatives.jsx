@@ -12,15 +12,15 @@ const TopCreatives = () => {
           {[
             {
               label: "Videography",
-              image: "/videography.jpg", 
+              image: "/DSC01237 copy.JPEG", 
             },
             {
-              label: "Hairstylist",
-              image: "/hairstylist.jpg", 
+              label: "Model",
+              image: "/DSC01349.JPEG", 
             },
             {
               label: "Makeup Artist",
-              image: "/makeup-artists.webp", 
+              image: "/IMG_8790.JPG", 
             },
           ].map((item, index) => (
             <div key={index} className="text-center">
@@ -39,7 +39,7 @@ const TopCreatives = () => {
           {[
             {
               label: "Fashion Stylist",
-              image: "/fashion sylist.jpg", 
+              image: "/3P0A6667.JPEG", 
             },
             {
               label: "Digital & Graphic Design",
