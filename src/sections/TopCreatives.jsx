@@ -16,7 +16,7 @@ const TopCreatives = () => {
             },
             {
               label: "Model",
-              image: "/DSC01349.JPEG", 
+              image: "/3P0A6746.JPEG", 
             },
             {
               label: "Makeup Artist",

@@ -10,13 +10,14 @@ const WhyChoose = () => {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-12">
         
         {/* Image Side */}
-        <div className="w-full md:w-1/2 min-h-[300px] rounded-lg overflow-hidden">
-          <img
-            src="/4Z9A1464.JPG"
-            alt="Why Choose PicMe"
-            className="w-full h-full object-cover rounded-lg"
-          />
-        </div>
+        <div className="w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden rounded-lg">
+       <img
+      src="/4Z9A1464.JPG"
+      alt="Why Choose PicMe"
+     className="w-full h-full object-cover object-center"
+      />
+    </div>
+
 
         {/* Text Side */}
         <div className="w-full md:w-1/2 md:pl-10 flex flex-col justify-center">
