@@ -2,13 +2,38 @@ import React from 'react';
 import { FaGlobe, FaBriefcase, FaPenToSquare, FaCompass, FaUserPlus, FaWallet } from 'react-icons/fa6';
 
 const features = [
-  { icon: <FaGlobe size={30} />, title: 'Browse and Discover', text: 'Explore creative profiles and portfolios tailored to your needs.' },
-  { icon: <FaBriefcase size={30} />, title: 'Hire and Collaborate', text: 'Explore creative profiles and portfolios tailored to your needs.' },
-  { icon: <FaPenToSquare size={30} />, title: 'Receive and Review', text: 'Explore creative profiles and portfolios tailored to your needs.' },
-  { icon: <FaCompass size={30} />, title: 'Get Discovered and Hired', text: 'Explore creative profiles and portfolios tailored to your needs.' },
-  { icon: <FaUserPlus size={30} />, title: 'Signup and Showcase', text: 'Explore creative profiles and portfolios tailored to your needs.' },
-  { icon: <FaWallet size={30} />, title: 'Earn and Grow', text: 'Explore creative profiles and portfolios tailored to your needs.' },
+  { 
+    icon: <FaGlobe size={30} />, 
+    title: 'Browse and Discover', 
+    text: 'Find talented creatives from diverse fields like photography, design, and writing, all in one place.'
+  },
+  { 
+    icon: <FaBriefcase size={30} />, 
+    title: 'Hire and Collaborate', 
+    text: 'Connect with professionals who match your project vision and bring your ideas to life with ease.'
+  },
+  { 
+    icon: <FaPenToSquare size={30} />, 
+    title: 'Receive and Review', 
+    text: 'Get your finished work delivered on time, review it quickly, and request edits when needed.'
+  },
+  { 
+    icon: <FaCompass size={30} />, 
+    title: 'Get Discovered and Hired', 
+    text: 'Showcase your skills and get noticed by clients searching for the services you offer.'
+  },
+  { 
+    icon: <FaUserPlus size={30} />, 
+    title: 'Signup and Showcase', 
+    text: 'Create your free profile, upload your best work, and start building your presence.'
+  },
+  { 
+    icon: <FaWallet size={30} />, 
+    title: 'Earn and Grow', 
+    text: 'Turn your passion into profit, get paid securely, and build lasting relationships.'
+  },
 ];
+
 
 const HowItWorks = () => {
   return (

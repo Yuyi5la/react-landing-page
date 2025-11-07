@@ -1,9 +1,8 @@
-
 const Hero = () => {
   return (
     <section
       id="home"
-      className="relative bg-black text-white px-6 py-40 md:py-52 overflow-hidden z-10 min-h-screen flex items-center justify-center"
+      className="relative bg-black text-white px-4 sm:px-6 py-40 md:py-52 overflow-visible z-10 min-h-screen flex items-center justify-center"
     >
       <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-7xl mx-auto gap-10">
         {/* Left side - Text content */}
@@ -51,19 +50,25 @@ const Hero = () => {
         </div>
 
         {/* Right side - Images */}
-       <div className="relative flex gap-4 md:gap-6">
-  <img
-    src="/DSC01349.JPEG"
-    alt="Creative 1"
-    className="w-48 md:w-60 object-cover rounded-xl shadow-lg -rotate-8"
-  />
-  <img
-    src="/DSC01618.JPEG"
-    alt="Creative 2"
-    className="w-48 md:w-60 object-cover rounded-xl shadow-lg rotate-7 translate-y-6"
-  />
-</div>
-
+        <div className="relative flex gap-4 sm:gap-8 items-center justify-center flex-shrink-0">
+          <div className="relative">
+            <img
+              src="/DSC01349.JPEG"
+              alt="Creative 1"
+              className="w-52 h-64 sm:w-60 sm:h-72 md:w-72 md:h-80 object-cover rounded-2xl shadow-2xl transform rotate-[-8deg]"
+            />
+          </div>
+          <div className="relative">
+            <img
+              src="/DSC01618.JPEG"
+              alt="Creative 2"
+              className="w-52 h-64 sm:w-60 sm:h-72 md:w-72 md:h-80 object-cover rounded-2xl shadow-2xl transform rotate-[8deg]"
+              style={{
+                marginLeft: "-12px",
+              }}
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from "react-router-dom";
 
 const HelpAndFAQSection = () => {
   return (
@@ -77,12 +77,12 @@ const HelpAndFAQSection = () => {
             <p className="text-lg text-gray-700 mb-4">
               Our team is just an email away and ready to answer your question.
             </p>
-            <a
-              href="#contact"
+            <Link
+              to="/ContactUs"
               className="inline-block bg-teal-700 text-white font-semibold px-10 text-xl py-3 rounded-md  hover:bg-teal-800 transition mt-6"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
       </section>

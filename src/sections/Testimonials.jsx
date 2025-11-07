@@ -12,7 +12,7 @@ const testimonials = [
     text: " PicMe helped me to get a super fast creative in minutes after the one I booked disappointed me and the Makeupartist was excellent, I totally don’t regret my decision.",
   },
   {
-    name: 'Tolu Adebayo',
+    name: 'Divine',
     image: '/3P0A9538.JPG',
     text:" PicMe has helped me to improve my brand presence with a great photographer, graphic designer and video editor, I really don’t know how I would’ve managed it in such little time but they came through and made it happen. Kudos to PicMe frfr…they ate!",
   },
