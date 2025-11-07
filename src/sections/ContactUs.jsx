@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import {
   PhoneIcon,
   EnvelopeIcon,
@@ -7,6 +8,36 @@ import {
 } from "@heroicons/react/24/solid";
 
 const ContactSection = () => {
+  const form = useRef();
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs
+      .sendForm(
+        "service_vj95yon",
+        "template_pdsvix7",
+        form.current,
+        { publicKey: "zJurTrX35D6rWhRYf" }
+      )
+      .then(
+        () => {
+          setLoading(false);
+          setSuccess(true);
+          form.current.reset();
+          setTimeout(() => setSuccess(false), 3000);
+        },
+        (error) => {
+          setLoading(false);
+          alert("Failed to send message. Try again later.");
+          console.error(error);
+        }
+      );
+  };
+
   return (
     <>
       {/* Section Title */}
@@ -36,11 +67,10 @@ const ContactSection = () => {
               Get In Touch
             </h3>
             <p className="text-gray-700 mb-8 max-w-md">
-              Contact us for any question using the info below or fill the
-              contact form and we will get back to you on your enquiry.
+              Contact us for any questions using the info below or fill the
+              contact form and we’ll get back to you shortly.
             </p>
 
-            {/* Info Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {/* Phone */}
               <div className="flex items-start space-x-4">
@@ -60,7 +90,9 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-semibold">Email</p>
-                  <p className="text-gray-600 text-sm">picmedigital@gmail.com</p>
+                  <p className="text-gray-600 text-sm">
+                    picmedigital@gmail.com
+                  </p>
                 </div>
               </div>
 
@@ -91,29 +123,23 @@ const ContactSection = () => {
             <div className="mt-10 border-t pt-6 border-gray-300">
               <p className="font-semibold text-teal-800 mb-2">Social Media</p>
               <div className="flex space-x-4 text-2xl text-teal-700">
-                <a href="#">
-                  <i className="fab fa-facebook-f" />
-                </a>
-                <a href="#">
-                  <i className="fab fa-x-twitter" />
-                </a>
-                <a href="#">
-                  <i className="fab fa-instagram" />
-                </a>
-                <a href="#">
-                  <i className="fab fa-youtube" />
-                </a>
+                <a href="#"><i className="fab fa-facebook-f" /></a>
+                <a href="#"><i className="fab fa-x-twitter" /></a>
+                <a href="#"><i className="fab fa-instagram" /></a>
+                <a href="#"><i className="fab fa-youtube" /></a>
               </div>
             </div>
           </div>
 
           {/* Right Column: Contact Form */}
           <div className="bg-gray-200 p-8 rounded-lg shadow-md">
-            <form className="space-y-6">
+            <form ref={form} onSubmit={sendEmail} className="space-y-6">
               <div>
                 <label className="block font-medium mb-1">Name</label>
                 <input
                   type="text"
+                  name="from_name"
+                  required
                   className="w-full border border-teal-600 rounded px-4 py-2 focus:outline-none"
                 />
               </div>
@@ -123,6 +149,8 @@ const ContactSection = () => {
                   <label className="block font-medium mb-1">Email</label>
                   <input
                     type="email"
+                    name="from_email"
+                    required
                     className="w-full border border-teal-600 rounded px-4 py-2 focus:outline-none"
                   />
                 </div>
@@ -130,6 +158,7 @@ const ContactSection = () => {
                   <label className="block font-medium mb-1">Phone</label>
                   <input
                     type="text"
+                    name="phone"
                     className="w-full border border-teal-600 rounded px-4 py-2 focus:outline-none"
                   />
                 </div>
@@ -138,17 +167,26 @@ const ContactSection = () => {
               <div>
                 <label className="block font-medium mb-1">Message</label>
                 <textarea
+                  name="message"
                   rows="5"
+                  required
                   className="w-full border border-teal-600 rounded px-4 py-2 focus:outline-none"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="bg-teal-700 text-white px-6 py-2 rounded hover:bg-teal-800 transition"
+                className="bg-teal-700 text-white px-6 py-2 rounded hover:bg-teal-800 transition disabled:opacity-50"
+                disabled={loading}
               >
-                Submit
+                {loading ? "Sending..." : "Submit"}
               </button>
+
+              {success && (
+                <p className="text-teal-700 text-sm mt-2">
+                  Message sent successfully!
+                </p>
+              )}
             </form>
           </div>
         </div>

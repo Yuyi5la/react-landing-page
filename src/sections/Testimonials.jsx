@@ -2,19 +2,19 @@ import React, { useState } from 'react';
 
 const testimonials = [
   {
-    name: 'James Carter',
+    name: 'Sk Jessy',
     image: '/sk-6 2.JPEG',
-    text: "PicMe helped me connect with top creatives in minutes. It’s fast, reliable, and super easy to use.",
+    text: "PicMe helped me to get a really good graphic designer that communicated my brand values, and delivered timely and quality work as requested. I’d strongly recommend",
   },
   {
-    name: 'Henry Nwadike',
+    name: 'Bright Tech',
     image: '/3P0A0071.JPG',
-    text: "As a photographer, I’ve never had this much visibility. The platform is a game changer!",
+    text: " PicMe helped me to get a super fast creative in minutes after the one I booked disappointed me and the Makeupartist was excellent, I totally don’t regret my decision.",
   },
   {
     name: 'Tolu Adebayo',
-    image: '/DSC01618.JPEG',
-    text:"Finding a makeup artist that fits my budget and style has never been easier. Love PicMe!",
+    image: '/3P0A9538.JPG',
+    text:" PicMe has helped me to improve my brand presence with a great photographer, graphic designer and video editor, I really don’t know how I would’ve managed it in such little time but they came through and made it happen. Kudos to PicMe frfr…they ate!",
   },
 ];
 
