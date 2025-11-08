@@ -11,9 +11,25 @@ const ContactSection = () => {
   const form = useRef();
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [errors, setErrors] = useState({});
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    const formData = new FormData(form.current);
+    const from_name = formData.get("from_name");
+    const from_email = formData.get("from_email");
+    const phone = formData.get("phone");
+    const message = formData.get("message");
+
+    const newErrors = {};
+    if (!from_name.trim()) newErrors.name = "Name is required";
+    if (!from_email.trim()) newErrors.email = "Email is required";
+    if (!message.trim()) newErrors.message = "Message is required";
+
+    setErrors(newErrors);
+    if (Object.keys(newErrors).length > 0) return; 
+
     setLoading(true);
 
     emailjs
@@ -139,9 +155,12 @@ const ContactSection = () => {
                 <input
                   type="text"
                   name="from_name"
-                  required
+                  placeholder="Enter your full name"
                   className="w-full border border-teal-600 rounded px-4 py-2 focus:outline-none"
                 />
+                {errors.name && (
+                  <p className="text-red-600 text-sm mt-1">{errors.name}</p>
+                )}
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -150,15 +169,19 @@ const ContactSection = () => {
                   <input
                     type="email"
                     name="from_email"
-                    required
+                    placeholder="Enter your email"
                     className="w-full border border-teal-600 rounded px-4 py-2 focus:outline-none"
                   />
+                  {errors.email && (
+                    <p className="text-red-600 text-sm mt-1">{errors.email}</p>
+                  )}
                 </div>
                 <div>
                   <label className="block font-medium mb-1">Phone</label>
                   <input
                     type="text"
                     name="phone"
+                    placeholder="Optional"
                     className="w-full border border-teal-600 rounded px-4 py-2 focus:outline-none"
                   />
                 </div>
@@ -169,9 +192,12 @@ const ContactSection = () => {
                 <textarea
                   name="message"
                   rows="5"
-                  required
+                  placeholder="Write your message here..."
                   className="w-full border border-teal-600 rounded px-4 py-2 focus:outline-none"
                 ></textarea>
+                {errors.message && (
+                  <p className="text-red-600 text-sm mt-1">{errors.message}</p>
+                )}
               </div>
 
               <button
