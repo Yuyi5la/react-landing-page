@@ -43,7 +43,7 @@ const TopCreatives = () => {
             },
             {
               label: "Digital & Graphic Design",
-              image: "/graphic designer.jpg", 
+              image: "/godstime graphic.jpeg", 
             },
           ].map((item, index) => (
             <div key={index} className="text-center">
