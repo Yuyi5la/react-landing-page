@@ -12,7 +12,7 @@ const WhyChoose = () => {
         {/* Image Side */}
         <div className="w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden rounded-lg">
        <img
-      src="/4Z9A1464.JPG"
+      src="/4Z9A1464.webp"
       alt="Why Choose PicMe"
      className="w-full h-full object-cover object-center"
       />

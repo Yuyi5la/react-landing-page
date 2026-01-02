@@ -12,15 +12,15 @@ const TopCreatives = () => {
           {[
             {
               label: "Videography",
-              image: "/DSC01237 copy.JPEG", 
+              image: "/DSC01237 copy.webp", 
             },
             {
               label: "Model",
-              image: "/3P0A6746.JPEG", 
+              image: "/3P0A6746.webp", 
             },
             {
               label: "Makeup Artist",
-              image: "/IMG_8790.JPG", 
+              image: "/IMG_8790.webp", 
             },
           ].map((item, index) => (
             <div key={index} className="text-center">
@@ -39,11 +39,11 @@ const TopCreatives = () => {
           {[
             {
               label: "Fashion Stylist",
-              image: "/3P0A6667.JPEG", 
+              image: "/3P0A6667.webp", 
             },
             {
               label: "Digital & Graphic Design",
-              image: "/godstime graphic.jpeg", 
+              image: "/godstime graphic.webp", 
             },
           ].map((item, index) => (
             <div key={index} className="text-center">

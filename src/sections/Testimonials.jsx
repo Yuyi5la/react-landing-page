@@ -3,17 +3,17 @@ import React, { useState } from 'react';
 const testimonials = [
   {
     name: 'Sk Jessy',
-    image: '/sk-6 2.JPEG',
+    image: '/sk-6 2.webp',
     text: "PicMe helped me to get a really good graphic designer that communicated my brand values, and delivered timely and quality work as requested. I’d strongly recommend",
   },
   {
     name: 'Bright Tech',
-    image: '/3P0A0071.JPG',
+    image: '/3P0A0071.webp',
     text: " PicMe helped me to get a super fast creative in minutes after the one I booked disappointed me and the Makeupartist was excellent, I totally don’t regret my decision.",
   },
   {
     name: 'Divine',
-    image: '/3P0A9538.JPG',
+    image: '/3P0A9538.webp',
     text:" PicMe has helped me to improve my brand presence with a great photographer, graphic designer and video editor, I really don’t know how I would’ve managed it in such little time but they came through and made it happen. Kudos to PicMe frfr…they ate!",
   },
 ];

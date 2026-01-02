@@ -53,14 +53,14 @@ const Hero = () => {
         <div className="relative flex gap-4 sm:gap-8 items-center justify-center flex-shrink-0">
           <div className="relative">
             <img
-              src="/DSC01349.JPEG"
+              src="/DSC01349.webp"
               alt="Creative 1"
               className="w-52 h-64 sm:w-60 sm:h-72 md:w-72 md:h-80 object-cover rounded-2xl shadow-2xl transform rotate-[-8deg]"
             />
           </div>
           <div className="relative">
             <img
-              src="/DSC01618.JPEG"
+              src="/DSC01618.png"
               alt="Creative 2"
               className="w-52 h-64 sm:w-60 sm:h-72 md:w-72 md:h-80 object-cover rounded-2xl shadow-2xl transform rotate-[8deg]"
               style={{
