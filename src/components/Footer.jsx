@@ -113,7 +113,7 @@ const Footer = () => {
           </div>
           <div className="flex items-center gap-2">
             <EnvelopeIcon className="h-5 w-5 text-yellow-400" />
-            <span>picmedigital@gmail.com</span>
+            <span>tech@picmedigital.com</span>
           </div>
         </div>
 
