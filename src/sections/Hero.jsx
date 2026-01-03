@@ -60,7 +60,7 @@ const Hero = () => {
           </div>
           <div className="relative">
             <img
-              src="/DSC01618.png"
+              src="/DSC01618.webp"
               alt="Creative 2"
               className="w-52 h-64 sm:w-60 sm:h-72 md:w-72 md:h-80 object-cover rounded-2xl shadow-2xl transform rotate-[8deg]"
               style={{
