@@ -139,10 +139,47 @@ const ContactSection = () => {
             <div className="mt-10 border-t pt-6 border-gray-300">
               <p className="font-semibold text-teal-800 mb-2">Social Media</p>
               <div className="flex space-x-4 text-2xl text-teal-700">
-                <a href="#"><i className="fab fa-facebook-f" /></a>
-                <a href="#"><i className="fab fa-x-twitter" /></a>
-                <a href="#"><i className="fab fa-instagram" /></a>
-                <a href="#"><i className="fab fa-youtube" /></a>
+              
+
+    <a
+      href="https://x.com/picmedigital"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="PicMe on X"
+      className="hover:text-orange-400 transition"
+    >
+      <i className="fab fa-x-twitter" />
+    </a>
+
+    <a
+      href="https://www.instagram.com/picmedigital"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="PicMe on Instagram"
+      className="hover:text-orange-400 transition"
+    >
+      <i className="fab fa-instagram" />
+    </a>
+
+    <a
+      href="https://www.youtube.com/@picmedigital"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="PicMe on YouTube"
+      className="hover:text-orange-400 transition"
+    >
+      <i className="fab fa-youtube" />
+      </a>
+      <a
+  href="https://www.tiktok.com/@picmedigital"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="PicMe on TikTok"
+  className="hover:text-orange-400 transition"
+>
+  <i className="fab fa-tiktok" />
+</a>
+
               </div>
             </div>
           </div>
