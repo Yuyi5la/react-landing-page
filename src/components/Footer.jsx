@@ -10,6 +10,10 @@ import {
   FaInstagram,
   FaTiktok,
   FaXTwitter,
+  FaThreads,
+  FaLinkedin,
+  FaFacebook,
+  FaYoutube,
 } from "react-icons/fa6";
 
 const Footer = () => {
@@ -97,6 +101,43 @@ const Footer = () => {
               >
                 <FaTiktok className="text-xl" />
               </a>
+
+                <a
+                href="https://www.threads.com/@picmedigital"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-orange-400 transition"
+              >
+                <FaThreads className="text-xl" />
+              </a>
+
+              <a
+                href="https://www.facebook.com/share/1CHxTjqUAF/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-orange-400 transition"
+              >
+                <FaFacebook className="text-xl" />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/company/picmedigital/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-orange-400 transition"
+              >
+                <FaLinkedin className="text-xl" />
+              </a>
+
+              <a
+                href="https://www.youtube.com/@picmedigital"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-orange-400 transition"
+              >
+                <FaYoutube className="text-xl" />
+              </a>
+
             </div>
           </div>
         </div>

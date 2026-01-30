@@ -6,6 +6,15 @@ import {
   MapPinIcon,
   CameraIcon,
 } from "@heroicons/react/24/solid";
+import {
+  FaThreads,
+  FaLinkedin,
+  FaFacebook,
+  FaYoutube,
+  FaInstagram,
+  FaTiktok,
+  FaXTwitter,
+} from "react-icons/fa6";
 
 const ContactSection = () => {
   const form = useRef();
@@ -19,7 +28,6 @@ const ContactSection = () => {
     const formData = new FormData(form.current);
     const from_name = formData.get("from_name");
     const from_email = formData.get("from_email");
-    const phone = formData.get("phone");
     const message = formData.get("message");
 
     const newErrors = {};
@@ -139,47 +147,75 @@ const ContactSection = () => {
             <div className="mt-10 border-t pt-6 border-gray-300">
               <p className="font-semibold text-teal-800 mb-2">Social Media</p>
               <div className="flex space-x-4 text-2xl text-teal-700">
-              
+                <a
+                  href="https://x.com/picmedigital"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="PicMe on X"
+                  className="hover:text-orange-400 transition"
+                >
+                  <FaXTwitter />
+                </a>
 
-    <a
-      href="https://x.com/picmedigital"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="PicMe on X"
-      className="hover:text-orange-400 transition"
-    >
-      <i className="fab fa-x-twitter" />
-    </a>
+                <a
+                  href="https://www.instagram.com/picmedigital"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="PicMe on Instagram"
+                  className="hover:text-orange-400 transition"
+                >
+                  <FaInstagram />
+                </a>
 
-    <a
-      href="https://www.instagram.com/picmedigital"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="PicMe on Instagram"
-      className="hover:text-orange-400 transition"
-    >
-      <i className="fab fa-instagram" />
-    </a>
+                <a
+                  href="https://www.youtube.com/@picmedigital"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="PicMe on YouTube"
+                  className="hover:text-orange-400 transition"
+                >
+                  <FaYoutube />
+                </a>
 
-    <a
-      href="https://www.youtube.com/@picmedigital"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="PicMe on YouTube"
-      className="hover:text-orange-400 transition"
-    >
-      <i className="fab fa-youtube" />
-      </a>
-      <a
-  href="https://www.tiktok.com/@picmedigital"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="PicMe on TikTok"
-  className="hover:text-orange-400 transition"
->
-  <i className="fab fa-tiktok" />
-</a>
+                <a
+                  href="https://www.tiktok.com/@picmedigital"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="PicMe on TikTok"
+                  className="hover:text-orange-400 transition"
+                >
+                  <FaTiktok />
+                </a>
 
+                <a
+                  href="https://www.threads.com/@picmedigital"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="PicMe on Threads"
+                  className="hover:text-orange-400 transition"
+                >
+                  <FaThreads />
+                </a>
+
+                <a
+                  href="https://www.facebook.com/share/1CHxTjqUAF/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="PicMe on Facebook"
+                  className="hover:text-orange-400 transition"
+                >
+                  <FaFacebook />
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/company/picmedigital/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="PicMe on LinkedIn"
+                  className="hover:text-orange-400 transition"
+                >
+                  <FaLinkedin />
+                </a>
               </div>
             </div>
           </div>
