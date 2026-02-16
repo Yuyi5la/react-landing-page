@@ -159,9 +159,14 @@ const Footer = () => {
         </div>
 
         
-        <div className="text-center text-sm text-gray-400 mt-6 border-t border-gray-700 pt-4">
-          © 2025 PicMe. All Rights Reserved
+        <div className="flex justify-center items-center gap-3 text-sm text-gray-400 mt-6 border-t border-gray-700 pt-4">
+          <span>© 2025 PicMe. All Rights Reserved</span>
+          <span>|</span>
+          <Link to="/privacy-policy" className="hover:text-orange-500">
+            Privacy Policy
+          </Link>
         </div>
+
       </div>
     </footer>
   );

@@ -10,6 +10,7 @@ import RootLayout from "./Layout/RootLayout.jsx";
 import HomePage from "./sections/Home.jsx";
 import ContactUs from "./sections/ContactUs.jsx";
 import FAQS from "./sections/FAQS.jsx";
+import PrivacyPolicy from "./sections/PrivacyPolicy";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -27,6 +28,7 @@ function App() {
         {/* Other pages */}
         <Route path="ContactUs" element={<ContactUs />} />
         <Route path="faqs" element={<FAQS />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Route>
     )
   );
