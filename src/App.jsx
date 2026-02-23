@@ -11,7 +11,7 @@ import HomePage from "./sections/Home.jsx";
 import ContactUs from "./sections/ContactUs.jsx";
 import FAQS from "./sections/FAQS.jsx";
 import PrivacyPolicy from "./sections/PrivacyPolicy";
-
+import DeleteAccount from "./sections/RequestAccountDeletion.jsx";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -29,6 +29,8 @@ function App() {
         <Route path="ContactUs" element={<ContactUs />} />
         <Route path="faqs" element={<FAQS />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+  
+        <Route path="/delete-account" element={<DeleteAccount />} />  
       </Route>
     )
   );
