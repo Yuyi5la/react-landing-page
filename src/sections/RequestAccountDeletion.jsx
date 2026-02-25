@@ -1,46 +1,77 @@
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const DeleteAccount = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const navigate = useNavigate();
+
+  const baseURL = import.meta.env.VITE_BASE_URL;
+  const apiVersion = import.meta.env.VITE_API_VERSION;
+
+  const handleDelete = async (e) => {
     e.preventDefault();
     setLoading(true);
     setMessage("");
 
     try {
-      // Login to get access token
+      // Login
       const loginRes = await axios.post(
-        "https://api.yourbackend.com/api/v1/auth/login",
-        { email, password }
+        `${baseURL}/api/${apiVersion}/auth/login`,
+        {
+          email,
+          password,
+          fcm_token: {
+            token,
+            platform,
+          },
+        }
       );
 
-      const token = loginRes.data.accessToken;
+      const token =
+        loginRes.data.accessToken ||
+        loginRes.data.token ||
+        loginRes.data?.data?.accessToken;
+
+      if (!token) throw new Error("No access token returned");
+
+      // Confirm deletion
+      if (
+        !window.confirm(
+          "Are you sure you want to permanently delete your account?"
+        )
+      ) {
+        setLoading(false);
+        return;
+      }
 
       // Delete account
-      const deleteRes = await axios.patch(
-        "https://api.yourbackend.com/api/v1/users/delete",
-        {},
-        { headers: { Authorization: `Bearer ${token}` } }
+      await axios.delete(
+        `${baseURL}/api/${apiVersion}/users/delete-account`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
       );
 
-      setMessage(deleteRes.data.message || "Account deleted successfully.");
+      alert(deleteRes.message || "Account deleted successfully");
+
+      
       setEmail("");
       setPassword("");
-
-      // Optional: clear auth storage
-      localStorage.removeItem("token");
+      setMessage("");
+      
+      navigate("/goodbye");
 
     } catch (error) {
-      if (error.response) {
-        setMessage(error.response.data.message);
-      } else {
-        setMessage("Something went wrong. Please try again.");
-      }
+      setMessage(
+        error?.response?.data?.message || error.message || "Something went wrong"
+      );
     } finally {
       setLoading(false);
     }
@@ -57,7 +88,7 @@ const DeleteAccount = () => {
           Enter your email and password to permanently delete your account.
         </p>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleDelete} className="space-y-4">
           <input
             type="email"
             required
@@ -90,8 +121,7 @@ const DeleteAccount = () => {
         )}
 
         <p className="text-gray-400 text-xs text-center mt-6">
-          Once processed, your account and all associated data will be
-          permanently deleted.
+          Once processed, your account and all associated data will be permanently deleted.
         </p>
       </div>
     </div>
