@@ -26,8 +26,8 @@ const DeleteAccount = () => {
           email,
           password,
           fcm_token: {
-            token,
-            platform,
+            token: crypto.randomUUID(),
+            platform: "web",
           },
         }
       );
@@ -50,7 +50,7 @@ const DeleteAccount = () => {
       }
 
       // Delete account
-      await axios.delete(
+      const deleteRes = await axios.delete(
         `${baseURL}/api/${apiVersion}/users/delete-account`,
         {
           headers: {
@@ -59,7 +59,7 @@ const DeleteAccount = () => {
         }
       );
 
-      alert(deleteRes.message || "Account deleted successfully");
+      alert(deleteRes?.data?.message || "Account deleted successfully");
 
       
       setEmail("");
