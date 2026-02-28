@@ -51,11 +51,6 @@ const Footer = () => {
                   FAQs
                 </Link>
               </li>
-              <li>
-              <Link to="/delete-account" className="hover:text-orange-500">
-              Delete Account
-            </Link>
-            </li>
             </ul>
           </div>
 
@@ -164,13 +159,27 @@ const Footer = () => {
         </div>
 
         
-        <div className="flex justify-center items-center gap-3 text-sm text-gray-400 mt-6 border-t border-gray-700 pt-4">
-          <span>© 2025 PicMe. All Rights Reserved</span>
-          <span>|</span>
-          <Link to="/privacy-policy" className="hover:text-orange-500">
+        <div className="flex flex-col items-center gap-3 text-sm text-gray-400 mt-6 border-t border-gray-700 pt-6 text-center">
+        
+        
+        <div className="flex flex-wrap justify-center items-center gap-3">
+          <Link to="/privacy-policy" className="hover:text-orange-500 transition-colors">
             Privacy Policy
           </Link>
+
+          <span className="text-gray-600">|</span>
+
+          <Link to="/delete-account" className="hover:text-orange-500 transition-colors">
+            Delete Account
+          </Link>
         </div>
+
+      
+        <span className="text-xs text-gray-500">
+          © 2025 PicMe. All Rights Reserved
+        </span>
+
+      </div>
 
       </div>
     </footer>
